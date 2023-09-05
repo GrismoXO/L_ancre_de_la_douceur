@@ -46,7 +46,7 @@
             
 
                 <x-primary-button class="ml-3 hover kalam">
-                    {{ __('S\'enregistrer') }}
+                    {{ __('Se connecter') }}
                 </x-primary-button>
             </div>
         </div>

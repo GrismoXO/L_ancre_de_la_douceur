@@ -1,4 +1,5 @@
 <footer>
+<div class="h-28 bg-white"></div>
 <div class="border-solid border bg_pink_opa pb-6 pt-4 ">
     <div class="mt-4 flex justify-around flex_col_800">
     <div class="flex flex-row w_60 justify-around w_100"> 

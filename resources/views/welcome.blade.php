@@ -8,10 +8,10 @@
     <script src="https://kit.fontawesome.com/44f406f7d6.js" crossorigin="anonymous"></script>
 
 
-    @vite(['resources/css/app.css', 'resources/css/style.css', 'resources/js/app.js', 'resources/js/carousel.js'])
+    @vite(['resources/css/app.css', 'resources/css/style.css', 'resources/js/app.js', 'resources/js/carousel.js', 'resources/js/price.js'])
     <title>L'ancre de la douceur</title>
 </head>
-<body>
+<body class="">
     
     <header class=" h-screen" >
         @include('layouts.navigation')
@@ -25,7 +25,7 @@
         <div class="h-8"></div>
         <div class="flex flex-col justify-center">
             <div><p class="kalam text-2xl ">Venez visiter notre boutique</p></div>
-            <div class=" w-full flex justify-center"><a href="{{ route('articles.index')}}" class=" flex justify-center border-solid rounded-lg p-2 mt-4 bg_pink w-32 text_white kalam text-xl hover">En savoir +</a></div>
+            <div class=" w-full flex justify-center"><a href="{{ route('articles.index')}}" class=" flex justify-center border-solid rounded-lg p-2 mt-4 bg_pink w-32 text-white kalam text-xl hover">En savoir +</a></div>
         </div>
         <div style="height:3rem"></div>
         <div class="w-full flex justify-center">
@@ -50,11 +50,12 @@
     </div>
         </div>
     </header>
-
+    <main>
     <div class="bg-white">
         <div class="h-16"></div>
         <div><h2 class="flex justify-center text-3xl kalam">Nos services</h2></div>
         <div class="h-12"></div>
+        <div class="map blur_price z-20"></div>
         <div class="flex justify-center around">
             <div class="">
                 <img src="{{ asset('storage/icons/manucure.png')}}" alt="logo manucure" class="h-20 w-20 mb-4">
@@ -70,10 +71,7 @@
             </div>
         </div>
         <div class="flex mt-12 justify-center"><p class="open text-xl flex items-center text_black">Pour connaitre les tarifs appliqués chez nous</p></div>
-        <div class="flex mt-8 justify-center"><button class="text-xl kalam border border-solid bg_pink px-4 py-2 rounded-lg text-white hover">Cliquez ici</button></div>
-            
-            
-        
+        <div class="flex mt-8 justify-center"><button class="text-xl kalam border border-solid bg_pink px-4 py-2 rounded-lg text-white hover prices">Cliquez ici</button></div>           
         <div class="h-16"></div>
     </div>
     
@@ -102,7 +100,7 @@
                 <div id="slider" class="h-full flex  gap-2 items-center justify-start transition ease-out duration-700">
                     @foreach ($images as $image)
                     <div class="flex relative sm:w-auto ml-20 ">
-                        <img src="{{ asset('storage/'.$image->image)}}" alt="{{$image->alt}}" class="object-cover object-center w-80 h-80" />
+                        <img src="{{ asset('storage/'.$image->image)}}" alt="{{$image->alt}}" class="object-contain object-center  h-80" />
                     </div> 
                     @endforeach
                 </div>
@@ -113,9 +111,10 @@
                 </svg>
             </button>
         </div>
-    </div>   
+    </div> 
+</main>  
     <x-footer/> 
 </body>
 </html>
-    
+
 

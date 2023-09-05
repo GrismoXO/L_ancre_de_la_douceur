@@ -19,7 +19,7 @@
         <div class="flex justify-around pb-6 flex_col_800">
           <section class="flex items-center center">
               <div class="p-4">
-                <img src="{{ asset('storage/'.$article->image)}}" class="object-cover h-72 w-72" alt="{{ $article->alt }}">
+                <img src="{{ asset('storage/'.$article->image)}}" class="object-contain h-72" alt="{{ $article->alt }}">
               </div>
           </section>
           <section class="flex justify-evenly " >
