@@ -13,7 +13,6 @@
         <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
         <script src="https://kit.fontawesome.com/44f406f7d6.js" crossorigin="anonymous"></script>
 
-        <link rel="stylesheet" href="{{asset('/style.css')}}">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
@@ -23,7 +22,7 @@
 
 
         <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/css/style.css', 'resources/js/app.js', 'resources/js/popup.js'])
+        @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/css/style.css', 'resources/js/script.js']) 
     </head>
     <body class="font-sans antialiased">
         <div class="h-full bg-gray-100">
@@ -39,11 +38,12 @@
             @endif
 
             <!-- Page Content -->
-            <main class="relative top-28">
+            <main class="relative top-28 z-10">
                 {{ $slot }}
             </main>
         </div>
         <x-footer/>
+        <div class="flex justify-end fixed z-50 bottom-5 right-5 "><a href="" class="pr-4 btn_top hover hidden"><i class="fa-solid fa-circle-arrow-up text-5xl z-50 text_pink  hover_pink"></i></a></div>
         <script src="{{ asset('/popup.js') }}"></script>  
     </body>
 </html>

@@ -42,7 +42,7 @@ nav {
 }
 
 .text_pink {
-    color: #fdc1c5;
+    color: rgba(252, 192, 197, 0.5);
 }
 
 .text_black {
@@ -80,6 +80,10 @@ nav {
     transition-duration: 150ms;
 }
 
+.hover_pink:hover {
+    color:#fdc1c5;
+}
+
 .hover:hover {
     transform: translate(-2px, -2px);
     transition-duration: 150ms;
@@ -106,6 +110,7 @@ nav {
 
 @media screen and (max-width: 800px) {
     .flex_col_800 {
+        display: flex;
         flex-direction: column !important;
     }
 
@@ -133,6 +138,10 @@ nav {
 
     .m_0_800 {
         margin: 0 !important;
+    }
+
+    .none_800 {
+        display: none;
     }
 
     .center {
